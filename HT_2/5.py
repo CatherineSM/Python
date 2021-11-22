@@ -5,8 +5,14 @@
 #                Очікуваний результат:
 #                {'a': 1, 'b': 3, 'd': 5}
 
-dict1 = {'a': 2, 'b': 4, 'c': 7, 'd': 6} 
-dict2 = {'b': 4, 'c': 7}
-dict1.update(dict2)
+list1 = {1: 1, 2: 2,  2: 2, 'test': 4}
 
-print(dict1)
+values = set()
+new_list = {}
+
+    for k, v in list1.items():
+        if k not in values:
+        new_list.update({k: v})
+        values.add(k)
+print(new_list)
+
