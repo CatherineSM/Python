@@ -3,6 +3,9 @@
 #        Приклад виводу при введеному значенні 5 :
 #        {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 
-user_number = int(input('Введите целое число'))
-dict1 = {a: a ** 2 for a in range(user_number)}
-print(dict1)
+user_number = int(input('Введите целое число, больше 0'))
+dict1 = {a: a ** 2 for a in range(user_number + 1)}
+if user_number > 0:
+    print(dict1)
+else:
+    print('Введите, пожалуйста, целое число, больше 0')
