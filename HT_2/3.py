@@ -2,7 +2,7 @@
  #       Sample data: [(), (), ('',), ('a', 'b'), {}, ('a', 'b', 'c'), ('d'), #'', []]
  #       Expected output: [('',), ('a', 'b'), ('a', 'b', 'c'), 'd']
 
- list1 = [(), (), ('',), ('a', 'b'), {}, ('a', 'b', 'c'), ('d'), '', []]
- itemsToRemove = set([(), [], ''])
- b = filter(lambda x: x not in itemsToRemove, list1)
- print(b)
+list1 = [(), (), ('',), ('a', 'b'), {}, ('a', 'b', 'c'), ('d'), '', []]
+new_list = list(filter(None, list1))
+
+print (new_list)
