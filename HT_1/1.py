@@ -4,9 +4,10 @@
 #List : [‘1', ' 5', ' 7', ' 23']
 #Tuple : (‘1', ' 5', ' 7', ' 23')
 
+query=input("enter number, split by coma: ")
 
-values = input()
-list = values.split(",")
-tuple = tuple(list)
-print('List : ',list)
-print('Tuple : ',tuple)
+a_list = list(map(int,query.split(','))) 
+print(a_list)
+
+a_tuple = tuple(map(int,query.split(',')))
+print(a_tuple)
