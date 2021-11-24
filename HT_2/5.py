@@ -5,14 +5,8 @@
 #                Очікуваний результат:
 #                {'a': 1, 'b': 3, 'd': 5}
 
-list1 = {1: 1, 2: 2,  2: 2, 'test': 4}
-
-values = set()
-new_list = {}
-
-    for k, v in list1.items():
-        if k not in values:
-        new_list.update({k: v})
-        values.add(k)
-print(new_list)
+list1 = {1: 1, 2: [2], 3: [2], 'test': 4}
+res = {}
+[res.update({k:v}) for k,v in list1.items() if v not in res.values()]
+print(res)
 
