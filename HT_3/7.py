@@ -13,7 +13,10 @@ def arithmetic(user_num1, user_num2, operator):
     elif operator == '*':
         return user_num1 * user_num2
     elif operator == '/':
-        return user_num1 / user_num2
+        if user_num2 == 0:
+            print("На ноль делить не льзя")
+        else:
+            return user_num1 / user_num2
     else:
         return "Неизвестная операция"
 
