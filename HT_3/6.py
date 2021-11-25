@@ -40,7 +40,7 @@ def countinng(symbols):
 result = countinng(symbols)
 print(result)
 
-#Кусочек кода для объедененных символов
+#Кусочек кода для объедененных символов никак не могу вписать в основной код(((( 
 #symbols_total = ''
 #for symbol in user_string:
 #    if not symbol.isdigit():
