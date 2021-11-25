@@ -11,7 +11,7 @@
 user_string = input()
 
 symbols = len(user_string)
-user_line = list(user_strint)
+user_line = list(user_string)
 symbols = len(user_string)
 count_numbers = 0
 #total #current #ch #i,s
