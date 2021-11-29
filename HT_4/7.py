@@ -2,5 +2,11 @@
 #однакових елементів у ньому.
 
 array = [3, 3, 2, 7, 8, 1, 1, 4, 1]
-result = {i: array.count(i) for i in array}
-print(result)
+
+def conter(array):
+    array_d = {}.fromkeys(array, 0)
+    for a in array:
+        array_d[a] += 1
+    return  array_d
+   
+print(conter(array))
