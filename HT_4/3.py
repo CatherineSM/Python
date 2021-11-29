@@ -10,7 +10,7 @@ def is_prime(number):
         return False
     if number == 0 or number == 1:
         return False
-    for n in range(3, int(sqrt(number).real) + 1, 2):
+    for n in range(3, int(sqrt(number).real)):
         if number % user_number == 0: 
             return False
     return True  
