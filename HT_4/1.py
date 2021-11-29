@@ -9,8 +9,8 @@ def square(user_number):
 	if user_number <= 0:
 		print 
 	else:
-		p_sqare = user_number ** 2
-		s_sqare = user_number ** 3
+		p_sqare = user_number * 4
+		s_sqare = user_number ** 2
 		d_square = round(user_number * sqrt(2), 2)
 		list1 = (p_sqare, s_sqare, d_square)
 	return list1
