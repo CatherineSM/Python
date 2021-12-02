@@ -10,17 +10,30 @@ login = input()
 password = input()
 
 def is_valid(login, password):
-    if len(login) < 3 or len(login) > 50:
-        raise 'Имя пользователя должно содержать 3-50 символов.'
-    for i in login:
-        if i in '0123456789':
-            raise 'Имя не должно содержать цифры'
-    if len(password) < 8:
-        raise 'Пароль содержит меньше 8 символов.'
-    for i in password:
-        if i in '0123456789':
-            break
-    else:
-        raise 'Пароль должен содержать хотябы одну цифру.'
+    try:
+        if len(login) < 3 or len(login) > 50:
+            raise InvalidName
+    except InvalidName:
+        print("Пароль должен быть от 3 до 50 символов")
+    try:
+        for i in password:
+            if i in "0123456789":
+                break
+            if i not in "0123456789":
+                raise InvalidPassword:
+    except InvalidPassword:
+        print("В пароле доолжна быть цифра")
+    try:
+        if len(password) < 8:
+            raise InvalidPassword
+    except InvalidPassword:
+        print("В пароле меньше 8 символов")
+    try:
+        for j in login:
+            if j in "0123456789":
+                raise NumberName
+    except NumberName:
+        print("В имени не должно быть цифр")
+    return "ОК"
 
 print(is_valid(login, password))
