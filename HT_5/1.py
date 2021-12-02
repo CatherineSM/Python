@@ -19,7 +19,7 @@ def validation(user_name, user_password, silent = False):
     user_input = []
     user_input.append(user_name)
     user_input.append(user_password)
-    users_list = [['Vasya', 123456], ['Sasha', 654321], ['Tanya', 111111], ['Katya', 654371], ['Sara', 129456]]
+    users_list = [['Vasya', '123456'], ['Sasha', '4565'], ['Tanya', '111111'], ['Katya', '654371'], ['Sara', '129456']]
     if user_input in users_list:
         return True
     else:
