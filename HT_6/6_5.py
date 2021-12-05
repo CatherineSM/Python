@@ -1,4 +1,7 @@
-#  You can experiment here, it won’t be checked
+##6. Всі ви знаєте таку функцію як <range>. Напишіть свою реалізацію цієї 
+#функції.
+#   P.S. Повинен вертатись генератор.
+
 def validate_args(args):
     if len(args) < 1:
         raise ValueError("my_range expected at least 1 argument, got 0")
