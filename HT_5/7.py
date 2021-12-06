@@ -7,12 +7,10 @@
 #   ...    print(elem)
 from itertools import cycle
 
-usur_input=input("Введите значения через кому")
-a_list = list(query.split(',')) 
-
-from itertools import cycle
+usur_input = input("Введите значения через запятую")
+a_list = list(usur_input.split(','))
 
 def yes_no(a_list):
-   return itertools.cycle(a_list)
+    return itertools.cycle(a_list)
 
 print(a_list)
