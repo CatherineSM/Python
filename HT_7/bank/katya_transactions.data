@@ -1,0 +1,26 @@
+[
+    {
+        "user": "katya",
+        "type": "пополнение",
+        "amount": 800.0,
+        "timestamp": "09.12.2021 15:25:07"
+    },
+    {
+        "user": "katya",
+        "type": "снятие",
+        "amount": 400.0,
+        "timestamp": "09.12.2021 15:25:14"
+    },
+    {
+        "user": "katya",
+        "type": "снятие",
+        "amount": 150.0,
+        "timestamp": "09.12.2021 15:38:17"
+    },
+    {
+        "user": "katya",
+        "type": "пополнение",
+        "amount": 800.0,
+        "timestamp": "09.12.2021 15:44:23"
+    }
+]
