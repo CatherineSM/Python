@@ -192,7 +192,7 @@ def show_transaction_history(username):
 
 def validate_float(string):
     try:
-        return float(string)
+        return float(string) > 0
     except ValueError as e:
         return False
 
