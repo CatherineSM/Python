@@ -23,23 +23,18 @@ user_number = int(input("Введите количество символов в
 
 def blocks(user_file, user_number):
    with open(user_file, encoding ='utf-8') as file:
-      file_len = len(file.read())
-      center = math.ceil(file_len / 2)
-   if file_len < user_number*3:
-      raise ValueError("В файле недостаточно символов")
-   elif user_number <= 0:
-      raise ValueError("Количество символов в блоке должно быть плюсовым")
-   else:
-      with open(user_file, encoding ='utf-8') as file:
-         file_block1 = file.read(user_number)
-         file_block2_2 = file.read(center - math.ceil(user_number * 1.5))
-         file_block2 = file.read(user_number)
-         if user_number % 2 == 0:
-            file_block2_2 = file.read(center - math.floor(user_number * 2))
-         else:   
-            file_block2_2 = file.read(center - math.floor(user_number * 1.5))
-         file_block3 = file.read(user_number)
-   return center, file_block1, file_block2, file_block3
+      file_list = list(file.read())
+      file_len = len(file_list)
+      if user_number * 3 > file_len:
+         raise ValueError("В файле недостаточно символов")
+      elif user_number <= 0:  
+         raise ValueError("Количество символов в блоке должно быть плюсовым")
+      else:
+            block1 = file_list[:user_number]
+            block3 = file_list[-user_number: len(file_list)]
+            center = math.ceil(len(file_list)/2)
+            blok2 = file_list[center - math.ceil(user_number/2): center + math.floor(user_number/2)]  
+   return block1, blok2, block3
 
 print(blocks(user_file, user_number))
       
