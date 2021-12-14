@@ -97,14 +97,14 @@ def registration():
             elif selected_option == 2:
                 return
         password = input("Введите пароль:\n")
-        perform_after_registration_actions(password, username, "user")
+        perform_after_registration_actions(password, username)
 
         return username, password
 
 
 def perform_after_registration_actions(password, username):
     with open("users.csv", "a", encoding="utf-8", newline='') as users_file:
-        writer(users_file).writerow([username, password])
+        writer(users_file).writerow([username, password, "user"])
     with open(f"{username}_balance.data", "w", encoding="utf-8") as user_balance_file:
         user_balance_file.write(str(0))
     with open(f"{username}_transactions.json", "w", encoding="utf-8") as user_transactions_file:
