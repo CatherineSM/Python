@@ -250,7 +250,7 @@ def withdraw_amount(username):
         with open("cash_machine.json") as cash_machine_file:
             cash_machine_state = load(cash_machine_file)
         available_banknotes = {int(k): v for k, v in cash_machine_state["banknotes"].items() if
-                               int(k) < amount_to_withdraw and v > 0}
+                               int(k) <= amount_to_withdraw and v > 0}
         banknotes_to_issue = get_banknotes_to_issue(available_banknotes, amount_to_withdraw)
         if banknotes_to_issue is None:
             selected_option = get_option("Сумма, которую вы ввели не может быть выдана. Попробовать снова?")
@@ -349,7 +349,7 @@ def get_banknotes_to_issue_by_advanced_algorithm(available_banknotes, amount_to_
     all_banknotes = []
     for denomination in sorted(available_banknotes.keys(), reverse=True):
         all_banknotes += [denomination] * available_banknotes[denomination]
-    possible_amounts = {}
+    possible_amounts = {0: 0}
     for banknote in all_banknotes:
         new_possible_amounts = {k + banknote: banknote for k, v in possible_amounts.items() if
                                 k + banknote <= amount_to_withdraw}
