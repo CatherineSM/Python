@@ -286,8 +286,6 @@ def save_information_after_withdraw(amount_to_withdraw, new_balance, username, b
 
 
 def get_banknotes_to_issue(available_banknotes, amount_to_withdraw):
-    if not is_amount_aliquot_to_min_available_banknote(available_banknotes, amount_to_withdraw):
-        return
 
     if not is_enough_amount_available(available_banknotes, amount_to_withdraw):
         return
@@ -310,17 +308,7 @@ def is_enough_amount_available(available_banknotes, amount_to_withdraw):
     else:
         return True
 
-
-def is_amount_aliquot_to_min_available_banknote(available_banknotes, amount_to_withdraw):
-    if len(available_banknotes.keys()) == 0:
-        return False
-    min_banknote = min(available_banknotes.keys())
-    if amount_to_withdraw % min_banknote != 0:
-        return False
-    else:
-        return True
-
-
+    
 def is_advanced_algorithm_needed(available_banknotes):
     available_denominations = sorted(available_banknotes.keys())
     for i in range(1, len(available_denominations)):
