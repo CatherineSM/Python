@@ -42,7 +42,8 @@ def blocks(user_file, user_number):
          block3 = 'Недостаточно символов для выведения третьего блока'
          blok2 = 'Недостаточно символов для выведения второго блока'
       elif file_len == user_number:
-         block1 = 'Блоки идентичны', file_list        
+         block1 = 'Блоки идентичны', file_list
+         return  block1
       else:
             block1 = file_list[:user_number]
             block3 = file_list[-user_number: len(file_list)]
