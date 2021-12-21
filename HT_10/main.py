@@ -137,7 +137,7 @@ def registration():
         password = input("Введите пароль:\n")
         save_user((username, password, "user"))
 
-        return username, password
+        return get_user_by_username(username)
 
 
 def save_user(user):
