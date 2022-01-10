@@ -1,7 +1,3 @@
-#4. Видозмініть програму так, щоб метод init мався в класі «геометричні фігури» та приймав кольор фігури при 
-#створенні екземпляру, а методи init підкласів доповнювали його та додавали початкові розміри.
-
-
 class Shape:
 
     def __init__(self, color):
@@ -14,7 +10,7 @@ class Shape:
 class Square(Shape):
 
     def __init__(self, color, height, width):
-        Shape.__init__(self, color)
+        super().__init__(color)
         self.height = height
         self.width = width
 
@@ -22,7 +18,7 @@ class Square(Shape):
 class Oval(Shape):
 
     def __init__(self, color, height, width):
-        Shape.__init__(self, color)
+        super().__init__(color)
         self.height = height
         self.width = width
 
